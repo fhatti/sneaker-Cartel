@@ -24,12 +24,12 @@ export const shoes = [
         bigShoe: bigShoe3,
     },
 ];
-
 export const statistics = [
-    { value: '1k+', label: 'Brands' },
-    { value: '500+', label: 'Shops' },
-    { value: '250k+', label: 'Customers' },
+    { value: '100+', label: 'Brands' },
+    { value: '12k+', label: 'Customers' },
+    { value: '4,5k+', label: 'Reviews' },
 ];
+
 
 export const products = [
     {
