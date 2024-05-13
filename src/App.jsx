@@ -14,11 +14,10 @@ const App = () => {
     <div className="bg-background">
       <main className="relative">
         <Navbar />
-      </main>
-      <section className="xl:padding-l  wide:padding-r padding-b">
+      <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
       </section>
-      <section className="padding">
+      <section className="padding bg-paragraph">
         <Popular />
       </section>
       <section className="padding">
@@ -39,6 +38,7 @@ const App = () => {
       <section className="padding">
         <Footer />
       </section>
+      </main>
     </div>
   );
 };
