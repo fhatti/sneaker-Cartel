@@ -60,7 +60,7 @@ const App = () => {
         <AnimatedSection customClassName="bg-paragraph">
           <Reviews />
         </AnimatedSection>
-        <AnimatedSection customClassName="">
+        <AnimatedSection customClassName="bg-background">
           <Subscribe />
         </AnimatedSection>
         <Footer />
