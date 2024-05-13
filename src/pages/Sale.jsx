@@ -1,8 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { offer } from "../assets/images";
 import { Button } from "../components";
 import { useInView } from "react-intersection-observer";
-
 
 const Sale = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,11 +13,6 @@ const Sale = () => {
     }
   }, [inView]);
   return (
-    // <section
-    // id="sale"
-    //   className="flex justify-wrap- items-center max-xl:flex-col-reverse gap-10 max-container 
-    //   "
-    // >
     <section
       ref={ref}
       className={`flex justify-wrap- items-center max-xl:flex-col-reverse gap-10 max-container ${
@@ -50,13 +44,9 @@ const Sale = () => {
           cravings, surpassing even the loftiest dreams. Your expedition with us
           is nothing less than extraordinary—and we're just getting started.
         </p>
-        <div className='mt-11 flex flex-wrap gap-4' >
-          <Button label={"Shop Now"}
-          textColor={"text-headline"}/>
-          <Button
-          label="Learn more"
-          bgColor={"bg-headline"}
-          />
+        <div className="mt-11 flex flex-wrap gap-4">
+          <Button label={"Shop Now"} textColor={"text-headline"} />
+          <Button label="Learn more" bgColor={"bg-headline"} />
         </div>
       </div>
     </section>

@@ -12,6 +12,9 @@ import {
   bigShoe3,
   customer1,
   customer2,
+  customer3,
+  customer4,
+  customer5,
   shoe4,
   shoe5,
   shoe6,
@@ -115,6 +118,27 @@ export const reviews = [
     feedback:
       "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
   },
+  {
+    imgURL: customer3,
+    customerName: "Zander Flynn",
+    rating: 4.8,
+    feedback:
+      "Your kicks are fire, and your team's vibe is on point.",
+  },
+  {
+    imgURL: customer4,
+    customerName: "Kai Montgomery",
+    rating: 5.5,
+    feedback:
+    "Hey! Had a blast at your sneaker spot! Seriously cool vibes and the staff nailed it. Found my dream kicks! Spreadin' the word!",
+  },
+  {
+    imgURL: customer5,
+    customerName: "Seraphina Everly",
+    rating: 4.5,
+    feedback:
+      "Your sneaker shop rocks! Seriously dope selection, and the staff were awesome. ",
+  },
 ];
 
 export const footerLinks = [
@@ -153,3 +177,22 @@ export const socialMedia = [
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },
 ];
+
+export const companyMap= [
+  {
+    date: "sept. 22",
+    description:"Founded on the idea of redefining footwear, SNKR CARTEL took its first steps into the world with a vision to marry quality and style seamlessly.",
+  },
+  {
+    date:"feb. 23",
+    description:"Stepping into the next phase, SNKR CARTEL expanded its reach, bringing our premium shoes to more eager feet, while staying true to our commitment to excellence.",
+  },
+  {
+    date:"aug. 23",
+    description:"Breaking new ground,  introduced innovative features, setting the bar higher for comfort, sustainability, and style, shaping the future of footwear.",
+  },
+  {
+    date:"present",
+    description:"Your favourite plug of SNKRS"
+  }
+]

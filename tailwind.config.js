@@ -1,3 +1,5 @@
+import { customerThumbnail } from './src/assets/images';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -40,6 +42,9 @@ export default {
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",
         card: "url('assets/images/thumbnail-background.svg')",
+        about: "url('assets/images/about-thumbnail.svg')",
+        aboutLogo:"url('assets/images/about-thumbnail-logo.svg')",
+        customerThumbnail:"url('assets/images/customerThumbnail.svg')",
       },
       screens: {
         wide: "1440px",
@@ -48,6 +53,10 @@ export default {
         "slide-fwd-center": {
           '0%': { transform: 'scale(.9)' },
           '100%': { transform: 'scale(1.2)' },
+        },
+        "slide-fwd-center1": {
+          '0%': { transform: 'scale(.9)' },
+          '100%': { transform: 'scale(1.4)' },
         },
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
@@ -59,9 +68,12 @@ export default {
         },
       },
       animation: {
-        "slide-fwd-center":'slide-fwd-center 2s ease 0s 1 normal forwards',
+        "slide-fwd-center":'slide-fwd-center 1s ease 0s 1 normal forwards',
         "wiggle":"wiggle 1s ease-in-out infinite",
-        "fadeInUp": "fadeInUp 5s ease 0s 1 normal forwards"
+        "fadeInUp": "fadeInUp 5s ease 0s 1 normal forwards",
+        "slide-fwd-center1":'slide-fwd-center1 1s ease 0s 1 normal forwards',
+        
+       
         
       },
     },
