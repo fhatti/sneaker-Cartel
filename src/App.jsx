@@ -8,37 +8,63 @@ import {
   Reviews,
   Subscribe,
   Hero,
+  RoadMap,
 } from "./pages/index";
+import { useInView } from "react-intersection-observer";
+
+const AnimatedSection = ({ children, customClassName }) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  React.useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
+
+  return (
+    <section
+      ref={ref}
+      className={`padding ${
+        isVisible ? "animate-fadeInUp" : "opacity-0 translate-y-5"
+      } ${customClassName}`}
+    >
+      {children}
+    </section>
+  );
+};
+
 const App = () => {
   return (
     <div className="bg-background">
       <main className="relative">
         <Navbar />
-      </main>
-      <section className="xl:padding-1 wide:padding-r padding-b">
-        <Hero />
-      </section>
-      <section className="padding">
-        <Popular />
-      </section>
-      <section className="padding">
-        <Sale />
-      </section>
-      <section className="padding-x py-10">
-        <Services />
-      </section>
-      <section className="padding">
-        <About />
-      </section>
-      <section className="bg-background padding">
-        <Reviews />
-      </section>
-      <section className="padding padding-x sm:py-32 py-16  w-full">
-        <Subscribe />
-      </section>
-      <section className="padding">
+        <section className="xl:padding-l wide:padding-r padding-b">
+          <Hero />
+        </section>
+        <AnimatedSection customClassName="bg-paragraph">
+          <Popular />
+        </AnimatedSection>
+        <AnimatedSection customClassName="bg-background">
+          <Sale />
+        </AnimatedSection>
+        <AnimatedSection customClassName="bg-headline">
+          <Services />
+        </AnimatedSection>
+        <AnimatedSection customClassName="">
+          <About />
+        </AnimatedSection>
+        <AnimatedSection customClassName="">
+         <RoadMap />
+        </AnimatedSection>
+        <AnimatedSection customClassName="bg-paragraph">
+          <Reviews />
+        </AnimatedSection>
+        <AnimatedSection customClassName="bg-background">
+          <Subscribe />
+        </AnimatedSection>
         <Footer />
-      </section>
+      </main>
     </div>
   );
 };

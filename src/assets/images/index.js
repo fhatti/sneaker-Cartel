@@ -2,11 +2,19 @@ import bigShoe1 from "./big-shoe1.png";
 import bigShoe2 from "./big-shoe2.png";
 import bigShoe3 from "./big-shoe3.png";
 
-import customer1 from "./customer1.jpeg";
+import customer1 from "./customer1.svg";
 import customer2 from "./customer2.svg";
+import customer3 from "./customer3.svg";
+import customer4 from "./customer4.svg";
+import customer5 from "./customer5.svg";
+
+import customerThumbnail from "./customerThumbnail.svg"
+import customerThumbnail1 from "./customerThumbnail1.svg"
 
 import footerLogo from "./footer-logo.png"
 import headerLogo from "./logo.png";
+import textLogo from "./logo-text.svg"
+import textLogo1 from "./logo-text1.svg"
 
 import offer from "./offer.svg";
 
@@ -27,6 +35,9 @@ export {
   bigShoe3,
   customer1,
   customer2,
+  customer3,
+  customer4,
+  customer5,
   footerLogo,
   headerLogo,
   offer,
@@ -39,5 +50,9 @@ export {
   thumbnailShoe1,
   thumbnailShoe2,
   thumbnailShoe3,
+  textLogo,
+  textLogo1,
+  customerThumbnail,
+  customerThumbnail1,
 
 };
