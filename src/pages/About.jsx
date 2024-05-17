@@ -44,7 +44,7 @@ const About = () => {
       </div>
       <div className="mt-12 flex lg:flex-col">
         {socialMedia.map((social) => (
-          <a href="/">
+          <a key={social.alt} href="/">
             <img
               src={social.src}
               alt={social.alt}

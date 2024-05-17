@@ -1,11 +1,11 @@
 import React from "react";
-import { footerLogo } from "../assets/images";
+import {snkrText ,footerLogo, headerLogo } from "../assets/images";
 import { footerLinks, socialMedia } from "../constants";
 import { copyrightSign } from "../assets/icons";
 
 const Footer = () => {
   return (
-    <footer className="max-container">
+    <footer className="max-container ">
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
           <a href="/">
@@ -18,7 +18,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-5 mt-8 mb-8">
             {socialMedia.map((icon) => (
-              <div className="flex justify-center items-center w-12 h-12 bg-headline rounded-full hover:bg-button cursor-pointer">
+              <div key={icon.src} className="flex justify-center items-center w-12 h-12 bg-headline rounded-full hover:bg-button cursor-pointer">
                 <img src={icon.src} alt="icon-logo" width={24} height={24} />
               </div>
             ))}
@@ -43,9 +43,12 @@ const Footer = () => {
             ))}
           </div>
         </div>
+        <div>
+        <img src={snkrText} alt="sneaker-text" className="p-20" />
+        </div>
       </div>
-      <div className="flex justify-between text-headline mt-24 max-sm:flex-col max-sm:items-center">
-        <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer">
+      <div className="flex justify-between text-headline mt-20 max-sm:flex-col max-sm:items-center ">
+        <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer pb-20">
           <img
             src={copyrightSign}
             alt="copyright sign"

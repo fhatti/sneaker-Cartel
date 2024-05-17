@@ -9,10 +9,10 @@ const Reviews = () => {
         <img src={customerThumbnail} alt="" />
         <img src={customerThumbnail1} alt="" />
       </div>
-      <h3 className="font-palanquin text-center text-4xl font-bold">
-        What Does Our <span className="text-background">Customers </span>Say?
+      <h3 className="font-palanquin text-center text-4xl font-bold text-headline">
+        What Does Our <span className="text-button">Customers </span>Say?
       </h3>
-      <p className="text-background m-auto mt-4 max-w-[700px] text-center">
+      <p className="text-paragraph m-auto mt-4 max-w-[700px] text-center">
         {" "}
         In this section, we showcase authentic feedback and testimonials
         directly from those who have entrusted us with their needs. These

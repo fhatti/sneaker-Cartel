@@ -34,7 +34,7 @@ const RoadMap = () => {
     </div>
     <div className="flex flex-1 flex-col  ">
     {companyMap.map((event => (
-      <div className={`flex flex-1 flex-col p-1  ${
+      <div key={event.date} className={`flex flex-1 flex-col p-1  ${
         isVisible ? "animate-fadeInUp" : ""}`}> 
       <p className="mt-4 text-headline  py-2">
         {event.date}
