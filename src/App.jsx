@@ -38,7 +38,6 @@ const AnimatedSection = ({ children, customClassName }) => {
 const App = () => {
   return (
     <div className="bg-background">
-        <ScrollToTop className="bg-button sm:fixed shadow-3xl" height="20px" width="40px" />
       <main className="relative">
         <Navbar/>
         <section className="xl:padding-l wide:padding-r padding-b">
@@ -65,9 +64,9 @@ const App = () => {
         <AnimatedSection customClassName="bg-paragraph">
           <Subscribe />
         </AnimatedSection>
-        <backToTopBtn/>
         <Footer />
       </main>
+      <ScrollToTop className="bg-button sm:fixed shadow-3xl" height="20px" width="40px"/>
     </div>
   );
 };
