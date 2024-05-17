@@ -1,5 +1,5 @@
 import React from "react";
-import {snkrText ,footerLogo } from "../assets/images";
+import {snkrText ,footerLogo, headerLogo } from "../assets/images";
 import { footerLinks, socialMedia } from "../constants";
 import { copyrightSign } from "../assets/icons";
 
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-        <img src={snkrText} alt="" />
+        <img src={snkrText} alt="sneaker-text" className="p-20" />
         </div>
       </div>
       <div className="flex justify-between text-headline mt-20 max-sm:flex-col max-sm:items-center ">
