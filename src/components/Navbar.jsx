@@ -4,7 +4,7 @@ import { headerLogo } from "../assets/images";
 import { navLinks } from "../constants";
 const Navbar = () => {
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+    <header className="padding-x py-8 absolute z-10 w-full mb-10 sm:max-h-svh">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="logo" width={200} height={30} />

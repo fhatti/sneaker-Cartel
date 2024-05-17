@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "react-scroll-to-top";
 import { Navbar, Footer } from "./components/index";
 import {
   Popular,
@@ -37,8 +38,9 @@ const AnimatedSection = ({ children, customClassName }) => {
 const App = () => {
   return (
     <div className="bg-background">
+        <ScrollToTop className="bg-button sm:fixed shadow-3xl" height="20px" width="40px" />
       <main className="relative">
-        <Navbar />
+        <Navbar/>
         <section className="xl:padding-l wide:padding-r padding-b">
           <Hero />
         </section>
@@ -57,12 +59,13 @@ const App = () => {
         <AnimatedSection customClassName="">
          <RoadMap />
         </AnimatedSection>
-        <AnimatedSection customClassName="bg-paragraph">
+        <AnimatedSection customClassName="bg-black">
           <Reviews />
         </AnimatedSection>
-        <AnimatedSection customClassName="bg-background">
+        <AnimatedSection customClassName="bg-paragraph">
           <Subscribe />
         </AnimatedSection>
+        <backToTopBtn/>
         <Footer />
       </main>
     </div>

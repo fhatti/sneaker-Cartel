@@ -15,6 +15,7 @@ import footerLogo from "./footer-logo.png"
 import headerLogo from "./logo.png";
 import textLogo from "./logo-text.svg"
 import textLogo1 from "./logo-text1.svg"
+import snkrText from "./snkr-text.svg"
 
 import offer from "./offer.svg";
 
@@ -28,6 +29,8 @@ import thumbnailBackground from "./thumbnail-background.svg";
 import thumbnailShoe1 from "./thumbnail-shoe1.svg";
 import thumbnailShoe2 from "./thumbnail-shoe2.svg";
 import thumbnailShoe3 from "./thumbnail-shoe3.svg";
+
+
 
 export {
   bigShoe1,
@@ -54,5 +57,6 @@ export {
   textLogo1,
   customerThumbnail,
   customerThumbnail1,
+  snkrText,
 
 };
