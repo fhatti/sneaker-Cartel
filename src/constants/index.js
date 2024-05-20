@@ -33,6 +33,12 @@ export const navLinks = [
   { href: "#contact-us", label: "Contact" },
 ];
 
+export const account = [
+  { href: "#my-account", label: "My Account" },
+  { href: "#orders", label: "Orders" },
+  { href: "#settings", label: "Settings" },
+]
+
 export const shoes = [
   {
     thumbnail: thumbnailShoe1,
