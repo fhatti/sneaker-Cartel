@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button, ShoeCard } from "../components";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { shoes, statistics } from "../constants";
-import { bigShoe1 } from "../assets/images";
+import { bigShoe1, headerLogo } from "../assets/images";
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);

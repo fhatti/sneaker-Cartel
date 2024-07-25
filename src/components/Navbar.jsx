@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [logIn, setLogIn] = useState(false);
+
   const openNav = () => {
     setIsOpen(true);
   };
@@ -20,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full max-sm:border-2 max-sm:relative">
       <nav className="flex justify-between items-center max-container">
-        <Link to="/homepage">
+        <Link to="/">
           <img
             src={headerLogo}
             alt="logo"
@@ -33,11 +34,9 @@ const Navbar = () => {
           <GiHamburgerMenu />
         </span>
         <div
-          className={`sidenav ${
-            isOpen ? "sidenav-open" : "sidenav.closebtn"
-          } flex flex-col justify-between items-start`}
+          className={`sidenav ${isOpen ? "sidenav-open" : "sidenav-close"}`}
         >
-          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
+          <a href="#!" className="closebtn" onClick={closeNav}>
             <AiOutlineCloseCircle />
           </a>
           <ul className="flex-1 flex-col max-lg:hidden">
@@ -50,13 +49,13 @@ const Navbar = () => {
           <div className="flex flex-col w-full">
             {logIn ? (
               <div className="flex flex-col justify-between items-start">
-                <div className="flex justifiy-between items-center m-4 p-2">
+                <div className="flex justify-between items-center m-4 p-2">
                   <img
                     src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
                     className="rounded-full ml-2"
                     width={50}
-                    height={20}
-                    alt=""
+                    height={50} // Changed height to be consistent with width
+                    alt="User"
                   />
                   <h3 className="font-montserrat p-2 ml-2 text-paragraph">
                     Username
@@ -65,7 +64,7 @@ const Navbar = () => {
                 <div className="font-palanquin p-2 ml-5 mt-[-10px] mb-5">
                   <ul>
                     {account.map((acc) => (
-                      <li>
+                      <li key={acc.label}>
                         <Link to={acc.href}>{acc.label}</Link>
                       </li>
                     ))}
@@ -73,14 +72,19 @@ const Navbar = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-1 justify-between mx-6 mb-10 mt-2 ">
+              <div className="flex flex-1 justify-between mx-6 mb-10 mt-2">
                 <Button
-                  label={"Sign Up"}
-                  bgColor={"bg-inherit"}
-                  textColor={"text-headline"}
-                  to={"/signUp"}
+                  label="Sign Up"
+                  bgColor="bg-inherit"
+                  textColor="text-headline"
+                  to="/signUp"
                 />
-                <Button label={"Log In"} />
+                <Button
+                  label="Log In"
+                  bgColor="bg-inherit"
+                  textColor="text-headline"
+                  to="/login" 
+                />
               </div>
             )}
           </div>
