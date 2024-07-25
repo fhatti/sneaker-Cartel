@@ -19,6 +19,62 @@
     margin: 0 auto;
   }
 
+ 
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #0f3433;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top:60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #abd1c6;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f9bc60;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .sidenav-open {
+    width: 300px;
+  }
+  
+  .openbtn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    /* background-color:#f9bc60 ; */
+    color: #f9bc60;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 90px;
+    right: 25px;
+    z-index: 1;
+  }
+  
+
+
+
   .input {
     @apply sm:flex-1 max-sm:w-full text-base leading-normal pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-headline max-sm:rounded-full;
   }

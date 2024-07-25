@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import { Navbar, Footer } from "./components/index";
 import {
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div className="bg-background">
       <main className="relative">
-        <Navbar/>
+        <Navbar />
         <section className="xl:padding-l wide:padding-r padding-b">
           <Hero />
         </section>
@@ -56,7 +56,7 @@ const App = () => {
           <About />
         </AnimatedSection>
         <AnimatedSection customClassName="">
-         <RoadMap />
+          <RoadMap />
         </AnimatedSection>
         <AnimatedSection customClassName="bg-black">
           <Reviews />
@@ -66,7 +66,11 @@ const App = () => {
         </AnimatedSection>
         <Footer />
       </main>
-      <ScrollToTop className="bg-button sm:fixed shadow-3xl" height="20px" width="40px"/>
+      <ScrollToTop
+        className="bg-button sm:fixed shadow-3xl"
+        height="20px"
+        width="40px"
+      />
     </div>
   );
 };
