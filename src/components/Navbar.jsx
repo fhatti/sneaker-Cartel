@@ -7,7 +7,7 @@ import Button from "./Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [logIn, setLogIn] = useState(true);
+  const [logIn, setLogIn] = useState(false);
   const openNav = () => {
     setIsOpen(true);
   };
@@ -17,10 +17,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full mb-10 sm:max-h-svh">
+    <header className="padding-x py-8 absolute z-10 w-full max-sm:border-2 max-sm:relative">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
-          <img src={headerLogo} alt="logo" width={300} height={30} />
+          <img src={headerLogo} alt="logo" width={300} height={30} className="max-sm:w-[150px]"  />
         </a>
         <span className="openbtn max-sm:hidden" onClick={openNav}>
           <GiHamburgerMenu />
@@ -75,22 +75,6 @@ const Navbar = () => {
                 <Button label={"Log In"} />
               </div>
             )}
-            {/* <div className="flex justifiy-between items-center m-4 p-2">
-              <img
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                className="rounded-full ml-2"
-                width={50}
-                height={20}
-                alt=""
-              />
-              <h3 className="font-montserrat p-2 ml-2 text-paragraph">
-                Username
-              </h3>
-            </div>
-            <div className="flex flex-1 justify-between mx-6 mb-10 mt-2 ">
-              <Button label={"Sign Up"} bgColor={"bg-inherit"} textColor={"text-headline"} />
-              <Button label={"Log In"} />
-            </div> */}
           </div>
         </div>
       </nav>
