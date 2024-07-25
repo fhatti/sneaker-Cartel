@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { headerLogo, snkrText } from "../assets/images";
+import { headerLogo } from "../assets/images";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { navLinks, account } from "../constants/index";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,15 @@ const Navbar = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full max-sm:border-2 max-sm:relative">
       <nav className="flex justify-between items-center max-container">
-        <a href="/">
-          <img src={headerLogo} alt="logo" width={300} height={30} className="max-sm:w-[150px]"  />
-        </a>
+        <Link to="/homepage">
+          <img
+            src={headerLogo}
+            alt="logo"
+            width={250}
+            height={30}
+            className="max-sm:w-[150px]"
+          />
+        </Link>
         <span className="openbtn max-sm:hidden" onClick={openNav}>
           <GiHamburgerMenu />
         </span>
@@ -35,8 +42,8 @@ const Navbar = () => {
           </a>
           <ul className="flex-1 flex-col max-lg:hidden">
             {navLinks.map((link) => (
-              <li>
-                <a href={link.href}>{link.label}</a>
+              <li key={link.label}>
+                <Link to={`/${link.href}`}>{link.label}</Link>
               </li>
             ))}
           </ul>
@@ -57,9 +64,9 @@ const Navbar = () => {
                 </div>
                 <div className="font-palanquin p-2 ml-5 mt-[-10px] mb-5">
                   <ul>
-                    {account.map((acc) => ( 
+                    {account.map((acc) => (
                       <li>
-                        <a href={acc.href}>{acc.label}</a>
+                        <Link to={acc.href}>{acc.label}</Link>
                       </li>
                     ))}
                   </ul>
@@ -71,6 +78,7 @@ const Navbar = () => {
                   label={"Sign Up"}
                   bgColor={"bg-inherit"}
                   textColor={"text-headline"}
+                  to={"/signUp"}
                 />
                 <Button label={"Log In"} />
               </div>

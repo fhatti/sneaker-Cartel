@@ -25,18 +25,18 @@ import {
 } from "../assets/images";
 
 export const navLinks = [
-  { href: "#new", label: "New" },
-  { href: "#products", label: "Products" },
-  { href: "#sale", label: "Sale" },
-  { href: "#shop", label: "Shop" },
-  { href: "#about-us", label: "About Us" },
-  { href: "#contact-us", label: "Contact" },
+  { href: "/new", label: "New" },
+  { href: "/products", label: "Products" },
+  { href: "/sale", label: "Sale" },
+  { href: "/shop", label: "Shop" },
+  { href: "/about-us", label: "About Us" },
+  { href: "/contact-us", label: "Contact" },
 ];
 
 export const account = [
-  { href: "#my-account", label: "My Account" },
-  { href: "#orders", label: "Orders" },
-  { href: "#settings", label: "Settings" },
+  { href: "/my-account", label: "My Account" },
+  { href: "/orders", label: "Orders" },
+  { href: "/settings", label: "Settings" },
 ]
 
 export const shoes = [
