@@ -18,11 +18,12 @@ export default class User {
         }
     }
 
-    async logInUser(){
+    async logInUser(email,password){
         try {
         const userCredential = await signInWithEmailAndPassword(this.auth,email,password)
         const user = userCredential.user
-        console.log("User logged in successfully",user);
+        console.log("User logged in successfully!",user)
+        return user
         } catch (error) {
             console.error("Error during logging in:", error);
             return { errorCode: error.code, errorMessage: error.message };
