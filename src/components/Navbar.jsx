@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from 'react';
 import { headerLogo } from "../assets/images";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { navLinks, account } from "../constants/index";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import AuthContext from '../contexts/AuthContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [logIn, setLogIn] = useState(false);
+  const { user } = useContext(AuthContext); 
 
   const openNav = () => {
     setIsOpen(true);
@@ -47,18 +48,18 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex flex-col w-full">
-            {logIn ? (
+            {user ? (
               <div className="flex flex-col justify-between items-start">
                 <div className="flex justify-between items-center m-4 p-2">
                   <img
-                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                    src={user.photoURL || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}
                     className="rounded-full ml-2"
                     width={50}
-                    height={50} // Changed height to be consistent with width
+                    height={50}
                     alt="User"
                   />
                   <h3 className="font-montserrat p-2 ml-2 text-paragraph">
-                    Username
+                    {user.username || user.email || "Username"}
                   </h3>
                 </div>
                 <div className="font-palanquin p-2 ml-5 mt-[-10px] mb-5">
@@ -83,7 +84,7 @@ const Navbar = () => {
                   label="Log In"
                   bgColor="bg-inherit"
                   textColor="text-headline"
-                  to="/login" 
+                  to="/login"
                 />
               </div>
             )}
