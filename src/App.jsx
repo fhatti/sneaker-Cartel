@@ -4,6 +4,8 @@ import Layout from "./components/Layout";
 import Homepage from "./pages/Homepage";
 import SignUp from "./pages/SignUp";
 import Shop from "./components/Shop";
+import Login from "./pages/Login";
+
 
 
 
@@ -16,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/signUp" element={<SignUp />} />
+          <Route path="/login" element={<Login/>}/>
           <Route path="/shop" element={<Shop />} />
         </Routes>
       </Layout>

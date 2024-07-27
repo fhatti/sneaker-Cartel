@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import User from '../models/User'; // Adjust the import path as necessary
+import User from '../models/User';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -83,7 +83,7 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="mt-6 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+            className="mt-6 w-full bg-background text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
           >
             Log In
           </button>

@@ -6,8 +6,8 @@ import ScrollToTop from "react-scroll-to-top";
 const Layout = ({ children }) => {
   const location = useLocation();
 
-  // Define the paths where the Navbar/Footer should not be displayed
-  const hidePaths = ["/login", "/signUp"];
+
+  const hidePaths = [ "/signUp"];
 
   // Determine if the Navbar or Footer should be hidden
   const shouldHide = hidePaths.includes(location.pathname);
