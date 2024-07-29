@@ -4,7 +4,7 @@ import PopularCard from "../components/PopularCard";
 
 
 const Shop = () => {
-  const { sneakers, loading, error } = useApi();
+  const { data: sneakers, loading, error } = useApi('/read/shop-items/all');
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
@@ -15,6 +15,9 @@ const Shop = () => {
             <PopularCard
             name={sneaker.name}
             imgURL={sneaker.imgUrl}
+            reviewsNr={sneaker.reviewsNr}
+            price={sneaker.price}
+            rating={sneaker.rating}
             />
         </div>
     ))}

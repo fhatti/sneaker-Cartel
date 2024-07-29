@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Shop from "./pages/Shop";
+import Marketplace from "./pages/Marketplace";
 
 
 
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/shop" element={<Shop />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          
         </Routes>
       </Layout>
     </Router>

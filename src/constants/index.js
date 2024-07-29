@@ -29,7 +29,7 @@ export const navLinks = [
   { href: "/products", label: "Products" },
   { href: "/sale", label: "Sale" },
   { href: "/shop", label: "Shop" },
-  { href: "/about-us", label: "About Us" },
+  { href: "/marketplace", label: "Marketplace" },
   { href: "/contact-us", label: "Contact" },
 ];
 

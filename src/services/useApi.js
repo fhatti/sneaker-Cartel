@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 
-const useApi = () => {
-  const [sneakers, setSneakers] = useState([]);
+const useApi = (endpoint) => {
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchSneakers = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/read/all`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}${endpoint}`);
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
-        const data = await response.json();
-        setSneakers(data);
+        const result = await response.json();
+        setData(result);
       } catch (err) {
         setError(err);
       } finally {
@@ -21,10 +21,10 @@ const useApi = () => {
       }
     };
 
-    fetchSneakers();
-  }, []);
+    fetchData();
+  }, [endpoint]);
 
-  return { sneakers, loading, error };
+  return { data, loading, error };
 };
 
 export default useApi;

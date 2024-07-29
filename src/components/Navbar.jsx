@@ -43,7 +43,7 @@ const Navbar = () => {
           <ul className="flex-1 flex-col max-lg:hidden">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <Link to={`/${link.href}`}>{link.label}</Link>
+                <Link to={`${link.href}`}>{link.label}</Link>
               </li>
             ))}
           </ul>
