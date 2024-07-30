@@ -1,4 +1,4 @@
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../services/FirebaseClient";
 export default class User {
     
@@ -26,6 +26,15 @@ export default class User {
         return user
         } catch (error) {
             console.error("Error during logging in:", error);
+            return { errorCode: error.code, errorMessage: error.message };
+        }
+    }
+    async signOutUser() {
+        try {
+            await signOut(this.auth);
+            console.log("User signed out successfully!");
+        } catch (error) {
+            console.error("Error during sign out:", error);
             return { errorCode: error.code, errorMessage: error.message };
         }
     }
