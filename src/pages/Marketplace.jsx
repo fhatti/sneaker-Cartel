@@ -4,7 +4,7 @@ import MarketplaceCard from "../components/MarketplaceCard";
 import AuthContext from "../contexts/AuthContext";
 
 const Marketplace = () => {
-  const { data: sneakers, loading, error } = useApi("/read/shop-items/all");
+  const { data: sneakers, loading, error } = useApi("/read/marketplace-items/all");
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
@@ -31,9 +31,9 @@ const Marketplace = () => {
             <MarketplaceCard
               key={index}
               name={shoe.name}
-              imgURL={shoe.imgUrl}
+              image={shoe.image}
               price={shoe.price}
-              user={user.email}
+              user={shoe.email}
             />
           ))}
         </div>
